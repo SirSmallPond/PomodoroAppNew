@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TheosPomodoroApp</title>
+    <link rel="stylesheet" href="timerPage.css"/>
+  </head>
+
+  <body>
+    
+    <div id="mySidenav" class="sidenav">
+      <img src="images/SideMenuOpener.png" class="closebtn" onclick="closeNav()">
+      
+      <div class="StudyTips">
+        Study Tips
+      </div>
+
+      <div class="Settings">
+        Settings
+      </div>
+
+      <div class="Help">
+        Help
+      </div>
+    </div>
+    
+    <!-- The icon that Opens the Navigation Tab -->
+    <span onclick="openNav()">
+      <img src="images/SideMenuOpener.png" style="width:20px; height:20px; padding-left:8px; padding-top: 5px;">
+    </span>
+    
+
+    <!-- Main Page Content ....................................-->
+
+    <h1>Timer Page</h1>
+
+
+    <!-- Javascript elements ..................................-->
+    
+    <script> //Opens and Closes Navigation
+        /* Set the width of the side navigation to 250px */
+        function openNav() { //Triggered when icon is clicked
+          document.getElementById("mySidenav").style.width = "350px";
+          //document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          //document.body.style.backgroundColor = "white";
+        }
+    </script>
+
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+
+  </body>
+</html>
