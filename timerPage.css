@@ -1,3 +1,7 @@
+body {
+    user-select: none; /*User cannot select UI text*/
+}
+
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -12,37 +16,49 @@
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* The navigation menu links */
-.sidenav .StudyTips {
-    padding: 50px 8px 8px 32px;
+.sidenav .ButtonStyle {
     text-decoration: none;
     font-size: 25px;
     color: white;
     display: block;
     transition: 0.3s;
+    white-space: nowrap; /* Prevents text wrap */
+    padding-top: 45px;
+    font-family: "Segoe UI";
+}
+
+/* The navigation menu links */
+.sidenav .StudyTips {
+    padding: 25px 8px 25px 130px;
+    background-color: #6C6C6C;
+    border-radius: 8px 0px 0px 8px;
+    cursor: pointer;
+}
+.sidenav .StudyTips:hover {
+    background-color: #5F5F5F;
+    color: #DBDBDB
 }
 
 .sidenav .Settings {
-    padding: 55px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
+    padding: 23px 8px 27px 130px;
+    background-color: #686868;
+    border-radius: 8px 0px 0px 8px;
+    cursor: pointer;
+}
+.sidenav .Settings:hover {
+    background-color: #5C5C5C;
+    color: #DBDBDB
 }
 
 .sidenav .Help {
-    padding: 60px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
+    padding: 22px 8px 28px 130px;
+    background-color: #6C6C6C;
+    border-radius: 8px 0px 0px 8px;
+    cursor: pointer;
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
+.sidenav .Help:hover {
+    background-color: #5F5F5F;
+    color: #DBDBDB
 }
 
 /* Position and style the close button (top left corner) */
@@ -50,14 +66,32 @@
     position: absolute;
     top: 13px;
     left: 16px;
-    height: 20px;
-    width: 20px;
+    height: 21px;
+    width: 21px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
+.StudyTipsNavImg {
+    height:50px;
+    width:50px;
+    position:absolute;
+    top: 78px;
+    left: 30px;
+}
+
+.SettingsNavImg {
+    height:50px;
+    width:50px;
+    position:absolute;
+    top: 160px;
+    left: 30px;
+}
+
+.HelpNavImg {
+    height:50px;
+    width:50px;
+    position:absolute;
+    top: 243px;
+    left: 30px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
