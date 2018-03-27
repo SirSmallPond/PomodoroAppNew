@@ -10,12 +10,22 @@
 
   <!-- Navigation Bar..........................................-->
     
+    <div id="mySideStudynav" class="sidenavStudy">
+      <img src="images/SideMenuOpener.png" draggable="false" class="closebtnStudy" onclick="closeStudyNav(); closeMainNav()">
+      <!-- <div class="ButtonStyle"> - Depends on how I want these
+                                      buttons to look; they may be different -->
+
+      <h1>StudyTipsPage</h1>    
+          
+    </div>
+
+
     <div id="mySidenav" class="sidenav">
-      <img src="images/SideMenuOpener.png" draggable="false" class="closebtn" onclick="closeNav()">
+      <img src="images/SideMenuOpener.png" draggable="false" class="closebtn" onclick="closeNav(); closeStudyNav()">
       
       <div class="ButtonStyle">
 
-        <div class="StudyTips">
+        <div class="StudyTips" onclick="openStudyNav()">
           <img src="images/book.png" draggable="false" class="StudyTipsNavImg">
           <b>Study Tips</b>
         </div>
@@ -32,16 +42,17 @@
 
       </div>
     </div>
+  
     
     <!-- The icon that Opens the Navigation Tab --> 
-    <span onclick="openNav()">
+    <span onclick="openMainNav()">
       <img src="images/SideMenuOpener.png" draggable="false" style="position: absolute; width:21px; height:21px; padding-left: 8px; padding-top: 5px;">
     </span>
 
     <!-- The icon that returns to the Timer Page --> 
-    <span onclick="closeNav()">
+    <span onclick="closeMainNav(); closeStudyNav()">
         <img src="images/TimerEdited.png" draggable="false" style="width:25px; height:25px; padding-left: 350px; padding-top: 5px;">
-      </span>
+    </span>
     
 
     <!-- Main Page Content ....................................-->
@@ -51,9 +62,9 @@
 
     <!-- Javascript elements ..................................-->
     
-    <script src="navigation.js"></script>
+    <script src="javascript/navigation.js"></script>
 
-    <script src="timer.js"></script>
+    <script src="javascript/timer.js"></script>
 
     <script>
       // You can also require other files to run in this process
