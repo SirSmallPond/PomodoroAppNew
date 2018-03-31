@@ -1,0 +1,188 @@
+/* For MAIN NAVIGATION */
+
+        /* The side navigation menu */
+        .sidenav {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #7D7D7D; /* Google Light Greyish*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* MAIN NAVIGATION closing icon styling */
+            .sidenav .closebtn {
+                position: absolute;
+                top: 13px;
+                left: 16px;
+                height: 21px;
+                width: 21px;
+            }
+
+
+
+        /* Styling for all Buttons! */
+
+                /* basic styling for all MAIN NAVIGATION menu items */
+                .sidenav .ButtonStyle {
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: white;
+                    display: block;
+                    transition: 0.3s;
+                    white-space: nowrap; /* Prevents text wrap */
+                    padding-top: 0px; /*Originally this was 45 */
+                    font-family: "Segoe UI";
+                }
+
+                /* MAIN NAVIGATION Individual menu items Styling */
+
+                        /*study tips menu item*/
+                        .sidenav .StudyTips {
+                            padding: 25px 8px 25px 130px;
+                            background-color: #6C6C6C;
+                            border-radius: 8px 0px 0px 8px;
+                            cursor: pointer;
+                        }
+                        .sidenav .StudyTips:hover {
+                            background-color: #5F5F5F;
+                            color: #DBDBDB
+                        }
+
+                        /*settings menu item*/
+                        .sidenav .Settings {
+                            padding: 23px 8px 27px 130px;
+                            background-color: #686868;
+                            border-radius: 8px 0px 0px 8px;
+                            cursor: pointer;
+                        }
+                        .sidenav .Settings:hover {
+                            background-color: #5C5C5C;
+                            color: #DBDBDB
+                        }
+
+                        /*help menu item*/
+                        .sidenav .Help {
+                            padding: 22px 8px 28px 130px;
+                            background-color: #6C6C6C;
+                            border-radius: 8px 0px 0px 8px;
+                            cursor: pointer;
+                        }
+                        .sidenav .Help:hover {
+                            background-color: #5F5F5F;
+                            color: #DBDBDB
+                        }
+
+
+/* for STUDY TIPS NAVIGATION */
+
+        /* The side navigation menu */
+        .sidenavStudy {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 2; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #7D7D7D; /* Google Light Greyish*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* Icon to close STUDY TIPS NAVIGATION menu */
+        .sidenavStudy .closebtnStudy {
+            position: absolute;
+            top: 13px;
+            left: 16px;
+            height: 21px;
+            width: 21px;
+        }
+
+        /* basic styling for all STUDY TIPS NAVIGATION menu items */
+                .sidenavStudy .ButtonStyle { 
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: white;
+                    display: block;
+                    transition: 0.3s;
+                    white-space: nowrap; /* Prevents text wrap */
+                    padding-top: 0px; /* This was originally 45 */
+                    font-family: "Segoe UI";
+                }
+
+
+                /* MAIN NAVIGATION Individual menu items Styling */
+
+                        /* work time menu item */
+                        .sidenavStudy .WorkTime {
+                            padding: 25px 8px 25px 115px;
+                            background-color: #6C6C6C;
+                            border-radius: 8px 0px 0px 8px;
+                            cursor: pointer;
+                        }
+                        .sidenavStudy .WorkTime:hover {
+                            background-color: #5F5F5F;
+                            color: #DBDBDB
+                        }
+
+                        /* break time menu item */
+                        .sidenavStudy .BreakTime {
+                            padding: 23px 8px 27px 115px;
+                            background-color: #686868;
+                            border-radius: 8px 0px 0px 8px;
+                            cursor: pointer;
+                        }
+                        .sidenavStudy .BreakTime:hover {
+                            background-color: #5C5C5C;
+                            color: #DBDBDB
+                        }
+
+                
+/* Styling for Menu Item Images (both MAIN and STUDY TIPS navigation menu) */
+
+        .menuItemImageOne { /* Styling for 'Study Tips' and 'using study time' menu item images */
+            height:50px;
+            width:50px;
+            position:absolute;
+            top: 78px;
+            left: 30px;
+        }
+
+        .menuItemImageTwo { /* Styling for 'Settings' and 'Using Break time' menu item images */
+            height:50px;
+            width:50px;
+            position:absolute;
+            top: 160px;
+            left: 30px;
+        }
+
+        .menuItemImageThree { /* Styling for 'help' menu item images */
+            height:50px;
+            width:50px;
+            position:absolute;
+            top: 243px;
+            left: 30px;
+        }
+
+
+/* Styling for Navigation Bar (timer and sideBar icons) */        
+
+    .timerIcon {
+        width:25px;
+        height:25px;
+        padding-left:350px;
+        padding-top:5px;
+    }
+
+    .mainNavigationIcon {
+        position:absolute;
+        width:21px;
+        height:21px;
+        padding-left:8px;
+        padding-top:5px;
+    }

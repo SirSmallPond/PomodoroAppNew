@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TheosPomodoroApp</title>
+    <link rel="stylesheet" href="../css/timerPage.css"/>
+    <link rel="stylesheet" href="../css/navigation.css"/>
+  </head>
+
+  <body>
+
+  <!-- Navigation Bar ..........................................-->
+
+            <!-- The icon that Opens the Navigation Tab --> 
+            <span onclick="openMainNav()">
+              <img src="../images/SideMenuOpener.png" class="mainNavigationIcon" draggable="false">
+            </span>
+
+            <!-- The icon that returns to the Timer Page --> 
+            <span onclick="closeMainNav(); closeStudyNav(); returnTimer()">
+                <img src="../images/TimerEdited.png" class="timerIcon "draggable="false">
+            </span>
+
+      <!-- MAIN navigation main elements -->
+
+          <div id="mySidenav" class="sidenav"> 
+            <img src="../images/SideMenuOpener.png" draggable="false" class="closebtn" onclick="closeMainNav()">
+      
+            <div class="ButtonStyle"> <!-- for basic styling applied to all buttons -->
+
+              <div class="StudyTips" onclick="openStudyNav()"> <!-- icon that opens STUDY TIPS NAVIGATION menu -->
+                <img src="../images/book.png" draggable="false" class="menuItemImageOne">
+                <b>Study Tips</b>
+              </div>
+
+              <div class="Settings" onclick="openSettings()"> <!-- icon that opens settings page-->
+                <img src="../images/Settings.png" draggable="false" class="menuItemImageTwo">
+                <b>Settings</b>
+              </div>
+
+              <div class="Help" onclick="openHelp()"> <!-- icon that opens Help page -->
+                <img src="../images/Help.png" draggable="false" class="menuItemImageThree">
+                <b>Help</b>
+              </div>
+
+            </div>
+          </div>
+
+
+      <!-- STUDY TIPS Navigation Bar main elements -->
+    
+          <div id="mySideStudynav" class="sidenavStudy"> <!-- Icon to close the opened STUDY TIPS menu -->
+            <img src="../images/SideMenuOpener.png" draggable="false" class="closebtnStudy" onclick="closeStudyNav()">
+      
+            <div class="ButtonStyle"> <!-- for basic styling that applies to all buttons -->
+
+                <div class="WorkTime" onclick="openStudyTime()"> <!-- to open work-time study tips; might remove -->
+                  <img src="../images/book.png" draggable="false" class="menuItemImageOne"> <!-- reusing styling from MAIN NAVIGATION menu -->
+                  <b>Using Study Time</b>
+                </div>
+  
+                <div class="BreakTime" onclick="openBreakTime()"> <!-- to open break-time study tips -->
+                  <img src="../images/coffecup.png" draggable="false" class="menuItemImageTwo"> <!-- reusing styling from MAIN NAVIGATION menu -->
+                  <b>Using Break Time</b>
+                </div>
+            </div>    
+          </div>
+
+
+      <!-- Main Page Content ....................................-->
+
+          <h1>Using Study Time</h1>
+
+
+      <!-- Javascript elements ..................................-->
+    
+          <script src="../javascript/navigation.js"></script>
+
+          <script src="../javascript/timer.js"></script>
+
+          <script>
+            // You can also require other files to run in this process
+            require('./renderer.js')
+          </script>
+
+  </body>
+</html>

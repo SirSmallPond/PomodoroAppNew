@@ -8,6 +8,7 @@ const path = require('path')
 const url = require('url')
 
 
+
 // Enable live/hot reload for all the files inside your project directory (But not entire application!)
 // require('electron-reload')(__dirname);
 
@@ -16,6 +17,7 @@ require('electron-reload')(__dirname, {
   // Note that the path to electron may vary according to the main file
   electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
 });
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -27,7 +29,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'timerPage.html'),
+    pathname: path.join(__dirname, 'html/timerPage.html'),
     protocol: 'file:',
     slashes: true
   }))
