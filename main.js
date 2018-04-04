@@ -7,14 +7,7 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
-
-
-// Enable live/hot reload for all the files inside your project directory (But not entire application!)
-// require('electron-reload')(__dirname);
-
-// Enable live/hot reload for Electron AS WELL AS all files inside project directory
 require('electron-reload')(__dirname, {
-  // Note that the path to electron may vary according to the main file
   electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
 });
 
@@ -25,14 +18,23 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 400, height: 400, resizable: false, alwaysOnTop :true})
+  mainWindow = new BrowserWindow({
+    width: 400, 
+    height: 400, 
+    resizable: false, 
+    alwaysOnTop :true, 
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'html/timerPage.html'),
+    pathname: path.join(__dirname, 'base.html'),
     protocol: 'file:',
     slashes: true
   }))
+
+  mainWindow.webContents.on('did-finish-load', function() {
+    mainWindow.show();
+  });
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -44,6 +46,14 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  /*mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  })*/
+
+  /*mainWindow.webContents.once('dom-ready', () => {
+    mainWindow.show()
+  })*/
 }
 
 //TO globally disable to default chrome menu (all pages)
