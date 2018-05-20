@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>TheosPomodoroApp</title>
-    <link rel="stylesheet" href="navigation.css"/>
+    <link rel="stylesheet" href="css/navigation.css"/>
 
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-route/angular-route.js"></script>
   </head>
 
   <body>
+
+<!-- MAIN Navigation slider main elements -->
 
     <div id="myNav" class="mainNavSlider">
 
@@ -23,12 +25,12 @@
               <b id="menuText" class="menuItemText">Study Tips</b>
             </div>
 
-            <div class="Settings" onclick="openSettings()"> <!-- icon that opens settings page-->
+            <div class="Settings" onclick="loadSettingsPage();"> <!-- icon that opens settings page-->
               <span class="helper"></span><img src="images/Settings.png" draggable="false" class="menuItemImageTwo">
               <b id="menuText2" class="menuItemText">Settings</b>           
             </div>
 
-            <div class="Help" onclick="openHelp()"> <!-- icon that opens Help page -->
+            <div class="Help" onclick="loadHelpPage();"> <!-- icon that opens Help page -->
               <span class="helper"></span><img src="images/Help.png" draggable="false" class="menuItemImageThree">
               <b id="menuText3" class="menuItemText">Help</b>      
             </div>
@@ -39,19 +41,19 @@
 
 
 
-    <!-- STUDY TIPS Navigation Bar main elements -->
+<!-- STUDY TIPS Navigation slider main elements -->
     
     <div id="mySideStudynav" class="sidenavStudy"> <!-- Icon to close the opened STUDY TIPS menu -->
       <img src="images/SideMenuOpener.png" draggable="false" class="closebtnStudy" onclick="closeStudyNav()">
 
       <div class="ButtonStyle"> <!-- for basic styling that applies to all buttons -->
 
-          <div class="WorkTime" onclick="openStudyTime()"> <!-- to open work-time study tips -->
+          <div class="WorkTime" onclick="loadStudyTimePage();"> <!-- to open work-time study tips -->
             <img src="images/book.png" draggable="false" class="menuItemImageOne"> <!-- reusing styling from MAIN NAVIGATION menu -->
             <b id="menuStudyText1" class="menuItemStudyText">Using Study Time</b>
           </div>
 
-          <div class="BreakTime" onclick="openBreakTime()"> <!-- to open break-time study tips -->
+          <div class="BreakTime" onclick="loadBreakTimePage();"> <!-- to open break-time study tips -->
             <img src="images/coffecup.png" draggable="false" class="menuItemImageTwo"> <!-- reusing styling from MAIN NAVIGATION menu -->
             <b id="menuStudyText2" class="menuItemStudyText">Using Break Time</b>
           </div>
@@ -62,23 +64,24 @@
 
     <div class="navBar">
           <span onclick="openNav()">
-            <img src="images/SideMenuOpener.png" class="mainNavigationIcon" draggable="false">
+              <span class="helper"></span><img src="images/SideMenuOpener.png" class="mainNavigationIcon" draggable="false">
           </span>
 
           <span class="invisWall"></span>
 
-          <span onclick="returnTimer()">
-            <img src="images/TimerEdited.png" class="timerIcon "draggable="false">
+          <span onclick="loadTimerPage();">
+              <span class="helper"></span><img src="images/TimerEdited.png" class="timerIcon" draggable="false">
           </span>
     </div>
 
-    <div class="ng-viewMain" ng-view></div>
+    <div id="ng-window" class="ng-viewMain" ng-view></div>
 
 
-      <!-- Javascript elements ..................................-->
+<!-- Javascript elements ..................................-->
 
           <script type="text/javascript" src="angularNavigation.js"></script>
           <script type="text/javascript" src="navigation.js"></script>
+          <script type="text/javascript" src="timer.js"></script>
 
           <script>
             // You can also require other files to run in this process

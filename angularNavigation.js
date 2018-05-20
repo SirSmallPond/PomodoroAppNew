@@ -1,5 +1,5 @@
 var app = angular.module("myApp", ["ngRoute"]);
-    app.config(function($routeProvider) {
+    app.config(['$routeProvider', function($routeProvider) {
         $routeProvider
         .when("/", {
             templateUrl : "timer.html"
@@ -15,5 +15,8 @@ var app = angular.module("myApp", ["ngRoute"]);
         })
         .when("/studyTime", {
             templateUrl : "studyTimePage.html"
+        })
+        .otherwise({
+            redirectTo: "timer.html"
         });
-    });
+    }]);

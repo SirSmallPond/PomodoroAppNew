@@ -3,16 +3,60 @@
   <head>
     <meta charset="UTF-8">
     <title>TheosPomodoroApp</title>
+    <link rel="stylesheet" href="css/timerPage.css"/>
+
   </head>
 
-  <body>
+  <body class="ContentContainer">
 
-    <p>timer Page</p>  
+    <div class="insertGoal">
+      <input type="text" id="goalInput" placeholder="Insert Goal"/>
+      <hr />
+    </div> 
 
-          <script>
-            // You can also require other files to run in this process
-            require('./renderer.js')
-          </script>
+      <img src="images/greyCircle.png" draggable="false" class="greyCircle">
+
+      <div class="timeDisplay">
+        <p id="time">25 : 00</p>
+      </div>
+
+        <img src="images/playButton.png" draggable="false" id="startbtn" onclick="timer()">
+
+        <img src="images/pauseButton.png" draggable="false" id="pausebtn" onclick="pause()">
+
+        <img src="images/stopButton.png" draggable="false" id="stopbtn" onclick="reset()">
+
+        <img src="images/lightstopButton.png" draggable="false" id="lightstopbtn">
+
+    <!--
+      <div onclick = setDefaultOne(); style="background-color: black; color: white;">
+        <p id="reset">Set Time 25 - 5 - 25</p>
+      </div>
+
+      <div onclick = setDefaultTwo(); style="background-color: black; color: white;">
+        <p id="reset">Set Time 52 - 17 - 52</p>
+      </div>
+
+      <div onclick = setDefaultThree(); style="background-color: black; color: white;">
+        <p id="reset">Set Time 90 - 20 - 90</p>
+      </div>
+
+      <div style="text-align: center;">
+        <input type="text" id="workTimeInput" placeholder="work time"/>
+        <button onclick="isInputNumber()">Set Work Time</button>
+
+        <input type="text" id="breakTimeInput" placeholder="break time"/>
+        <button onclick="isInputNumber()">Set Break Time</button>
+      
+      <p id="alertTime" style="color: green;"></p>
+  </div> -->
+
+      <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+      </script>
+      <script type="text/javascript" src="timer.js"></script>
+
 
   </body>
 </html>

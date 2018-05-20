@@ -1,0 +1,243 @@
+/* Styling for Navigation Bar (timer and sideBar icons) */
+    .navBar {
+        /*display: block; /*Takes up the entire width */
+        position: fixed;
+        height: 2.5em;
+        overflow: hidden;
+        top: 0;
+        width: 100%; /* 'display: block' property does this! */
+        background-color: white;
+    }
+
+    /* Buttons to Return to the timer */
+    .timerIcon {
+        /*padding-top: 0.15em; -0 from before Vertical-align was used */
+        width:1.5em;
+        height:1.5em;
+        vertical-align: middle;
+    }
+
+    .invisWall {
+        display: inline-block;
+        width: 80.5%;
+    }
+
+    .mainNavigationIcon { /* The element is positioned relative to its first positioned (not static) ancestor element */
+        width:1.25em;
+        height:1.25em;
+        padding-left: 0.2em;
+        /*padding-bottom: 0.15em; - From before Vertical-align was used */
+        vertical-align: middle;
+    }
+
+
+/* Styling for Angular Main View div */
+    .ng-viewMain {
+        display: block;
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        height: 20em;
+        margin-top: 2.5em; /*To make up for the Nav-bar */
+    }
+
+
+
+/* Navigation Main Page */
+    
+    .mainNavSlider {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+        height: 100%;
+        width: 0;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: #7D7D7D;
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    /* Close Button (3 lines) */
+    .mainNavSlider .closebtn {
+        position: absolute;
+        width:1.25em;
+        height:1.25em;
+        padding-left:0.75em;
+        padding-top: 0.65em;
+    }
+
+    /* Styling to be applied to all buttons */
+    .mainNavSlider .ButtonStyle {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        white-space: nowrap; /* Prevents text wrap */
+        padding-top: 2.5em; /*Originally this was 45 */
+        font-family: "Segoe UI";
+    }
+
+    /* Styling for Individual Menu Buttons */
+
+        /*study tips menu item*/
+        .mainNavSlider .StudyTips {
+            display: block;
+            height: 3.5em;
+            line-height: 3.5em;
+            background-color: #6C6C6C;
+            border-radius: 8px 0px 0px 8px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .mainNavSlider .StudyTips:hover {
+            background-color: #5F5F5F;
+            color: #DBDBDB
+        }
+
+        /*settings menu item*/
+        .mainNavSlider .Settings {
+            display: block;
+            height: 3.5em;
+            line-height: 3.5em;
+            background-color: #686868;
+            border-radius: 8px 0px 0px 8px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .mainNavSlider .Settings:hover {
+            background-color: #5C5C5C;
+            color: #DBDBDB
+        }
+
+        /*help menu item*/
+        .mainNavSlider .Help {
+            display: block;
+            height: 3.5em;
+            line-height: 3.5em;
+            background-color: #6C6C6C;
+            border-radius: 8px 0px 0px 8px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .mainNavSlider .Help:hover {
+            background-color: #5F5F5F;
+            color: #DBDBDB
+        }
+
+        .mainNavSlider .menuItemText { /*Text inside of each menu item button */
+            padding-left: 1.25em;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+
+/*Navigation Study Page Side Menu */
+
+    .sidenavStudy {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+        height: 100%;
+        width: 0;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: #7D7D7D;
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    /* Close Button (3 lines) */
+    .sidenavStudy .closebtnStudy {
+        position: absolute;
+        width:1.25em;
+        height:1.25em;
+        padding-left:0.75em;
+        padding-top: 0.65em;
+    }
+
+    /* Styling to be applied to all buttons */
+    .sidenavStudy .ButtonStyle {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        white-space: nowrap; /* Prevents text wrap */
+        padding-top: 2.5em; /*Originally this was 45 */
+        font-family: "Segoe UI";
+    }
+
+    /* Styling for Individual Menu Buttons */
+
+        /*study tips menu item*/
+        .sidenavStudy .WorkTime {
+            display: block;
+            height: 3.5em;
+            line-height: 3.5em;
+            background-color: #6C6C6C;
+            border-radius: 8px 0px 0px 8px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .sidenavStudy .WorkTime:hover {
+            background-color: #5F5F5F;
+            color: #DBDBDB
+        }
+
+        /*settings menu item*/
+        .sidenavStudy .BreakTime {
+            display: block;
+            height: 3.5em;
+            line-height: 3.5em;
+            background-color: #686868;
+            border-radius: 8px 0px 0px 8px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .sidenavStudy .BreakTime:hover {
+            background-color: #5C5C5C;
+            color: #DBDBDB;
+        }
+
+        .sidenavStudy .menuItemStudyText { /*Text inside of each menu item button */
+            padding-left: 1.25em;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+
+
+/* Styling for Images for Individual Menu Items */
+
+
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .menuItemImageOne { /* Styling for 'Study Tips' and 'using study time' menu item images */
+            max-height:2em;
+            max-width:2em;
+            padding-left: 1.25em;
+            vertical-align: middle;
+            padding-bottom: 0.2em;
+        }
+
+        .menuItemImageTwo { /* Styling for 'Settings' and 'Using Break time' menu item images */
+            max-height:2em;
+            max-width:2em;
+            padding-left: 1.25em;
+            vertical-align: middle;
+            padding-bottom: 0.2em;
+        }
+
+        .menuItemImageThree { /* Styling for 'help' menu item images */
+            max-height:2em;
+            max-width:2em;
+            padding-left: 1.25em;
+            vertical-align: middle;
+            padding-bottom: 0.2em;
+        }

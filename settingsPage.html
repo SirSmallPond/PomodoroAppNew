@@ -3,16 +3,40 @@
   <head>
     <meta charset="UTF-8">
     <title>TheosPomodoroApp</title>
+    <link rel="stylesheet" href="css/settings.css"/>
   </head>
 
   <body>
 
-    <p>settings page</p>
+        <div onclick = setDefaultOne(); style="background-color: black; color: white;">
+          <p>Set Time 25 - 5 - 25</p>
+        </div>
+    
+        <div onclick = setDefaultTwo(); style="background-color: black; color: white;">
+          <p>Set Time 52 - 17 - 52</p>
+        </div>
+    
+        <div onclick = setDefaultThree(); style="background-color: black; color: white;">
+          <p>Set Time 90 - 20 - 90</p>
+        </div>
+    
+        <div style="text-align: center;">
+          <input type="text" id="workTimeInput" placeholder="work time"/>
+          <button onclick="isInputNumber()">Set Work Time</button>
+    
+          <input type="text" id="breakTimeInput" placeholder="break time"/>
+          <button onclick="isInputNumber()">Set Break Time</button>
+          
+          <p id="alertTime" style="color: green;">mew</p>
+      </div>
+
 
           <script>
             // You can also require other files to run in this process
             require('./renderer.js')
+
           </script>
+          <script type="text/javascript" src="timer.js"></script>
 
   </body>
 </html>

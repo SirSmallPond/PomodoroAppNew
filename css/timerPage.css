@@ -1,11 +1,90 @@
-.body {
-    user-select: none; /*User cannot select UI text*/
+hr{   
+    height: 1.5%;
+    width: 37.5%;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4CB5AB;
 }
 
-<!-- /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 400px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-    .sidenavStudy {padding-top: 15px;}
-    .sidenavStudy a {font-size: 18px;}
+#startbtn{
+    height: 1.5em;
+    width: 1.5em;
+    position: absolute;
+    top: 72.5%;
+    left: 45%;
+    transform: translate(-45%, -72.5%);
+    display: block;
+}
+
+#pausebtn{
+    height: 1.4em;
+    width: 1.5em;
+    position: absolute;
+    top: 72.5%;
+    left: 45%;
+    transform: translate(-45%, -72.5%);
+    display: none;
+}
+
+#stopbtn{
+    height: 1.15em;
+    width: 1.15em;
+    position: absolute;
+    top: 72%;
+    left: 55%;
+    transform: translate(-55%, -72%);
+    display: block;
+}
+
+#lightstopbtn{
+    height: 1.15em;
+    width: 1.15em;
+    position: absolute;
+    top: 72%;
+    left: 55%;
+    transform: translate(-55%, -72%);
+    display: block;
+}
+
+
+
+#time{
+    text-align: center;
+    color: #009688;
+    font-size: 2.5em;
+    font-family: "Segoe UI", sans-serif;
+    position: absolute;
+    display: block;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+
+.greyCircle{
+    width: 11em;
+    height: 11em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+}
+
+.insertGoal{
+    display: block;
+    height: 30%;
+    text-align: center;
+}
+
+#goalInput{
+    color: #7F7B7B;
+    font-size: 1em;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+    font-style: italic;
+    margin-top: 8%;
+}
+
+::placeholder{
+    color: #D5D5D5;
 }
