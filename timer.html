@@ -10,11 +10,16 @@
   <body class="ContentContainer">
 
     <div class="insertGoal">
-      <input type="text" id="goalInput" placeholder="Insert Goal"/>
-      <hr />
-    </div> 
+      <input type="text" id="goalInput" placeholder="Insert Goal" maxlength="14"/>
 
-      <img src="images/greyCircle.png" draggable="false" class="greyCircle">
+      <hr id="line"/> <!-- The line beneath the text -->
+    </div>
+
+    <div>
+      <p id="userGoal"></p>
+    </div>
+
+      <img src="images/greyCircle.png" draggable="false" id="greyCircle">
 
       <div class="timeDisplay">
         <p id="time">25 : 00</p>
@@ -28,6 +33,19 @@
 
         <img src="images/lightstopButton.png" draggable="false" id="lightstopbtn">
 
+        <!-- images for orange buttons -->
+
+        <img src="images/playButtonOrange.png" draggable="false" id="orangestartbtn" onclick="breakTime()">
+
+        <img src="images/orangePauseButton.png" draggable="false" id="orangepausebtn" onclick="pause()">
+
+        <img src="images/orangeStopButton.png" draggable="false" id="orangestopbtn" onclick="reset()">
+
+        <img src="images/orangeLightStopButton.png" draggable="false" id="orangelightstopbtn">
+
+        <!--<p id="testing">Testing</p>   Testing; but this broke stuff!
+        <p id="testingBreak">Testing</p>   Testing; but this broke stuff!
+        <p id="timerPage">TimerPage</p>  Testing; but this broke stuff! -->
     <!--
       <div onclick = setDefaultOne(); style="background-color: black; color: white;">
         <p id="reset">Set Time 25 - 5 - 25</p>
@@ -56,6 +74,7 @@
         require('./renderer.js')
       </script>
       <script type="text/javascript" src="timer.js"></script>
+      <script type="text/javascript" src="settings.js"></script>
 
 
   </body>

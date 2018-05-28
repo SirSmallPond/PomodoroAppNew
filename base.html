@@ -9,7 +9,7 @@
     <script src="./bower_components/angular-route/angular-route.js"></script>
   </head>
 
-  <body>
+  <body id="backgroundMain"> 
 
 <!-- MAIN Navigation slider main elements -->
 
@@ -62,7 +62,7 @@
 
 <!-- Main Page Content ....................................-->
 
-    <div class="navBar">
+    <div id="navBar">
           <span onclick="openNav()">
               <span class="helper"></span><img src="images/SideMenuOpener.png" class="mainNavigationIcon" draggable="false">
           </span>
@@ -70,7 +70,7 @@
           <span class="invisWall"></span>
 
           <span onclick="loadTimerPage();">
-              <span class="helper"></span><img src="images/TimerEdited.png" class="timerIcon" draggable="false">
+              <span class="helper"></span><img src="images/TimerEdited.png" class="timerIcon" id="timerImage" draggable="false">
           </span>
     </div>
 
@@ -82,11 +82,11 @@
           <script type="text/javascript" src="angularNavigation.js"></script>
           <script type="text/javascript" src="navigation.js"></script>
           <script type="text/javascript" src="timer.js"></script>
+          <script type="text/javascript" src="settings.js"></script>
 
           <script>
             // You can also require other files to run in this process
             require('./renderer.js')
           </script>
-
   </body>
 </html>

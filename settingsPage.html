@@ -8,27 +8,149 @@
 
   <body>
 
-        <div onclick = setDefaultOne(); style="background-color: black; color: white;">
-          <p>Set Time 25 - 5 - 25</p>
-        </div>
-    
-        <div onclick = setDefaultTwo(); style="background-color: black; color: white;">
-          <p>Set Time 52 - 17 - 52</p>
-        </div>
-    
-        <div onclick = setDefaultThree(); style="background-color: black; color: white;">
-          <p>Set Time 90 - 20 - 90</p>
-        </div>
-    
-        <div style="text-align: center;">
-          <input type="text" id="workTimeInput" placeholder="work time"/>
-          <button onclick="isInputNumber()">Set Work Time</button>
-    
-          <input type="text" id="breakTimeInput" placeholder="break time"/>
-          <button onclick="isInputNumber()">Set Break Time</button>
-          
-          <p id="alertTime" style="color: green;">mew</p>
+      <div id="settingsHeader">
+        
+        <img src="images/settingsHeaderIcon.png" draggable="false" id="settingsHeaderIcon">
+
+        <p id="settingsTitle">Settings</p>
+
+        <hr id="settingsHeaderLine"/>
+
       </div>
+
+      <div id="settingsContentBG">
+
+        <div id="settingsContent">
+
+          <div id="workingStyleSubHeading">
+
+            <img src="images/workingStyleSubHeading.png" draggable="false" id="workingStyleSubHeadingImage">
+            <img src="images/workingStyleSubHeadingDark.png" draggable="false" id="workingStyleSubHeadingImageDark">
+          </div>
+
+          <div id="workingStyleContent">
+            <div id="radioButtons">
+
+                <label class="container">1
+                    <input type="radio" checked="checked" name="radio" id="defaultOne">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container">2
+                    <input type="radio" name="radio" id="defaultTwo">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container">3
+                    <input type="radio" name="radio" id="defaultThree">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container">4
+                    <input type="radio" name="radio" id="customRadio">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div id="defaultOptionsImage"> <!-- The image for default options -->
+                <img src="images/defaultSettings.png" draggable="false" id="defaultSettingsImage">
+                <img src="images/defaultSettingsDark.png" draggable="false" id="defaultSettingsImageDark">
+            </div>
+
+            <img src="images/custom.png" draggable="false" id="customSettingImage">
+            <img src="images/customDark.png" draggable="false" id="customSettingImageDark">
+
+            <input type="text" id="workTimeInput" placeholder="enter" maxlength="5"/>
+            <!--<button onclick="isInputNumber()">Set Work Time</button> -->
+
+              <img src="images/customColon.png" draggable="false" class="customColonImage">
+    
+            <input type="text" id="breakTimeInput" placeholder="enter" maxlength="5"/>
+            <!--<button onclick="isInputNumber()">Set Break Time</button> -->
+          
+          </div>
+
+          <!--
+
+            <p>The number of times you want the timer to go :D</p>
+
+            <div onclick = setDefaultOne(); style="background-color: black; color: white;">
+              <p>Set Time 25 - 5 - 25</p>
+            </div>
+    
+            <div onclick = setDefaultTwo(); style="background-color: black; color: white;">
+              <p>Set Time 52 - 17 - 52</p>
+            </div>
+    
+            <div onclick = setDefaultThree(); style="background-color: black; color: white;">
+              <p>Set Time 90 - 20 - 90</p>
+            </div> -->
+
+          <div id="audioSubHeading">
+              <img src="images/audioSubHeading.png" draggable="false" id="audioSubHeadingImage">
+              <img src="images/audioSubHeadingDark.png" draggable="false" id="audioSubHeadingImageDark">
+          </div>
+
+          <div id="audioContent">
+
+            <p id="timerSounds">Toggle Timer Sounds</p>
+
+            <label class="switch">
+                <input type="checkbox" id="timerSound" checked>
+                <span class="slider round"></span>
+            </label>
+
+            <p id="timerAlarm">Toggle Timer Alarm</p>
+
+            <label class="switch2">
+                <input type="checkbox" id="timerAlarmSound" checked>
+                <span class="slider round"></span>
+            </label>
+            <!--
+              <input type="checkbox" id="timerSound" checked>
+              <label for="timerSound">Timer Sound</label>
+
+              <input type="checkbox" id="timerAlarmSound" checked>
+              <label for="timerAlarmSound">Timer Alarm Sound</label>
+
+              <button onclick="timerSounds()">Apply timer sound settings</button> -->
+
+          </div>
+
+          <div id="visualsSubHeading">
+              <img src="images/visualsSubHeading.png" draggable="false" id="visualsSubHeadingImage">
+              <img src="images/visualsSubHeadingDark.png" draggable="false" id="visualsSubHeadingImageDark">
+          </div>
+
+          <div id="visualsContent">
+
+              <p id="darkThemeText">Toggle Dark Theme</p>
+
+              <label class="switch3">
+                  <input type="checkbox" id="darkTheme">
+                  <span class="slider round"></span>
+              </label>
+          </div>
+
+          <div id="applyContent">
+
+            <img src="images/warning.png" draggable="false" id="warningImage">
+
+            <p id="applyParagraph">Applying any changes will result in your timer resetting to its original value. If you do not wish to apply new settings, simply select 'Cancel' from below. If you wish to apply new settings, simply hit 'Apply' to perform your changes.
+            </p>
+
+            <!--<p id="applyText" onclick="apply()">Apply</p> -->
+
+            <p id="alertTime"></p>
+
+            <img src="images/cancelButton.png" onclick="loadTimerPage()" draggable="false" id="cancelImage">
+            <img src="images/applyButton.png" onclick="apply()" draggable="false" id="applyImage">
+          </div>
+
+        </div>
+
+      </div>
+
 
 
           <script>
@@ -37,6 +159,7 @@
 
           </script>
           <script type="text/javascript" src="timer.js"></script>
+          <script type="text/javascript" src="settings.js"></script>
 
   </body>
 </html>
